@@ -1174,14 +1174,12 @@ footer {
 }
 
 .project-box {
-    width: 100%;
-    height: 400px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    transition-duration: .3s;
-    border-radius: 30px;
-    border: 1px solid var(--tech-stack-box-border-color)
+    height: 400px;
+    gap: 0;
 }
 
 .info-div {
@@ -1192,7 +1190,26 @@ footer {
     align-items: flex-start;
     justify-content: center;
     gap: 20px;
-    padding: 0 40px
+    padding: 0 40px;
+}
+
+.image-div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.image-div img {
+    max-width: 320px;
+    max-height: 260px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
 }
 
 .faviconforProject {
@@ -1202,18 +1219,6 @@ footer {
 
 .faviconforProjectAquaregia {
     width: 20px
-}
-
-.image-div {
-    width: 50%;
-    height: 100%;
-    padding-top: 70px;
-    padding-left: 10px
-}
-
-.image-div img {
-    height: 100%;
-    border-top-left-radius: 30px
 }
 
 .ProjectHeading {
@@ -1790,17 +1795,26 @@ footer {
 
     .project-box {
         flex-direction: column;
-        height: 800px
+        height: 800px;
+        align-items: stretch;
     }
 
-    .image-div,
-    .info-div {
+    .info-div, .image-div {
         width: 100%;
-        height: 50%
+        height: 50%;
+        padding: 0;
     }
 
     .image-div {
-        padding: 0 0 0 80px
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .image-div img {
+        max-width: 90vw;
+        max-height: 300px;
+        border-radius: 12px;
     }
 }
 
@@ -1904,20 +1918,18 @@ footer {
     }
 
     .project-box {
-        height: 550px
+        height: 550px;
+        padding: 10px;
     }
 
     .info-div {
         height: 60%
     }
 
-    .image-div {
-        height:40%;
-        padding-left: 50px
-    }
-
     .image-div img {
-        border-top-left-radius: 10px
+        max-width: 100vw;
+        max-height: 180px;
+        border-radius: 8px;
     }
 
     .tech-stack-wrapper {
